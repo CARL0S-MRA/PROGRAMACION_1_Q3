@@ -29,7 +29,17 @@ public class DatosAlumnos {
         Sintaxis:
         Tipo de Datos identificador(Nombre de la varaiable);
         
+        Asignar datos 
+        1- Valor constante (idVariable=Datos)
+        2- Valor Dinamico (Desde el teclado clase Scanner)
+          2.1 int - nextInt()
+          2.2 double - nextDouble()
+          2.3 boolean - nextBoolean()
+          2.4 String - next() o nextLine()
+          2.5 char - ?
         */
+        
+        
         
     }
 }
