@@ -33,6 +33,9 @@ double seguroMensual =lea.nextDouble()/100;
 double cuotaMensual = (montoPrestamo+interes+comisionCuota+seguroMensual);
 double totalPagar = cuotaMensual * plazoMeses;
 
+System.out.println("---- CUOTAS MENSUALES ----"+
+        "\n Cuota de Pago Mensual: "+cuotaMensual+
+        "\n Total a Pagar: "+totalPagar+" %");
     }
     
 }
