@@ -29,7 +29,13 @@ public class Rodriguez_Carlos_PlanillaEmpleado {
         System.out.println("Ingrese la tarifa");
         double tarifa =lea.nextDouble();
         //Salario del Empleado Semanal: Lps. ##.##
+        double salario= (horasMensual*tarifa);
         
+        System.out.println("---- BOLETA DEL EMPLEADO ----"+
+                "\n Nombre del Empleado: "+nombrePersona+
+                "\n Horas de Trabajo: "+horasMensual+
+                "\n "
+       
         
     }
     
