@@ -20,12 +20,19 @@ public class Rodriguez_Carlos_Cuotas {
 
 Scanner lea=new Scanner(System.in);
 System.out.println("Ingresar monto");
-double montoprestamo=lea.nextDouble();
+double montoPrestamo=lea.nextDouble();
 System.out.println("Ingresar el plazo de meses");
 int plazoMeses =lea.nextInt();
 System.out.println("Ingresar el interes");
 double interes =lea.nextDouble()/100;
-System.out.println("Ingresar");
+System.out.println("Ingresar la comision por cuota");
+double comisionCuota =lea.nextDouble()/100;
+System.out.println("Ingresar el porcentaje del seguro mensual");
+double seguroMensual =lea.nextDouble()/100;
+
+double cuotaMensual = (montoPrestamo+interes+comisionCuota+seguroMensual);
+double totalPagar = cuotaMensual * plazoMeses;
+
     }
     
 }
