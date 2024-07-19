@@ -17,11 +17,18 @@ public class Rodriguez_Carlos_PlanillaEmpleado {
         //Hora de Trabajo Mensual: ##
         //Tarifa por Hora : Lps. ##.##
         //Salario del Empleado Semanal: Lps. ##.##
+        
         Scanner lea=new Scanner(System.in);
+        //Nombre del Empleado: " "
         System.out.println("Ingrese el nombre del empleado");
         String nombrePersona=lea.next();
+        //Hora de Trabajo Mensual: ##
         System.out.println("Ingrese numero de horas de trabajo");
         int horasMensual=lea.nextInt();
+        //Tarifa por Hora : Lps. ##.##
+        System.out.println("Ingrese la tarifa");
+        double tarifa =lea.nextDouble();
+        //Salario del Empleado Semanal: Lps. ##.##
         
         
     }
