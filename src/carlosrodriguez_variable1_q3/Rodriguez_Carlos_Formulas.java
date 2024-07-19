@@ -14,19 +14,32 @@ public class Rodriguez_Carlos_Formulas {
         
         
         Scanner lea=new Scanner(System.in);
+        //Ejercicio A
         //Ingreso de Datos
         System.out.println("Ejercicio A");
         System.out.println("Numerador 1");
-        int numerador1 =lea.nextInt();
+        int numerador1A =lea.nextInt();
         System.out.println("Denominador 1");
-        int denominador1 =lea.nextInt();
+        int denominador1A =lea.nextInt();
         System.out.println("Numerador 2");
-        int numerador2 =lea.nextInt();
-        System.out.println(" Denominador 2");
-        int denominador2 =lea.nextInt();
+        int numerador2A =lea.nextInt();
+        System.out.println("Denominador 2");
+        int denominador2A =lea.nextInt();
         
         //Resultados
-        int resultadoA = (numerador1/denominador1)+(numerador2/denominador2);
+        int resultadoA = (numerador1A/denominador1A)+(numerador2A/denominador2A);
         System.out.println("El resultado del ejercicio A es  "+resultadoA);
+        
+        //Ejercicio B
+        System.out.println("Ejercicio B");
+        System.out.println("Numerador 1");
+        int numerador1B =lea.nextInt();
+        System.out.println("Denominador 1 Variable");
+        String denominador1Bvar =lea.next();
+        System.out.println("Denominador 1");
+        int denominador1B =lea.nextByte();
+        
+        
+        
     }
 }
