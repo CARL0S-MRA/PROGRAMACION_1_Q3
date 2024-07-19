@@ -34,7 +34,7 @@ public class Rodriguez_Carlos_PlanillaEmpleado {
         System.out.println("---- BOLETA DEL EMPLEADO ----"+
                 "\n Nombre del Empleado: "+nombrePersona+
                 "\n Horas de Trabajo: "+horasMensual+
-                "\n "
+                "\n Salario: "+salario+" %");
        
         
     }
