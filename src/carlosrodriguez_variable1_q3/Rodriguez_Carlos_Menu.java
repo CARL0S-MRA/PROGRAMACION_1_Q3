@@ -22,6 +22,7 @@ public class Rodriguez_Carlos_Menu {
             if(opcion==1){
                 System.out.println("----CADENA----");
                 
+                
         }   
             else if(opcion==2){
                 System.out.println("----NOTAS----");
@@ -37,19 +38,21 @@ public class Rodriguez_Carlos_Menu {
                 while(contador++<cantidadNotas){
                     System.out.println("Nota"+contador+": ");
                     double nota=lea.nextDouble();
-                    sumarnota=+nota;
+                    sumarnota+=nota;
                     
+                     while(nota>notamayor){
+                        notamayor=nota;
+                    }
+                    
+                        while(nota<notamenor){
+                        notamenor=nota;
+                    }
                     while(nota<=-1|| nota>=101){
                         System.out.println("Nota"+contador+": ");
                         nota=lea.nextDouble();
-                    while(nota>notamayor){
-                        notamayor=nota;
-                    }
-                    while(nota<notamenor){
-                        notamenor=nota;
-                    }
                 }
                 }
+                
                 promedio=sumarnota/cantidadNotas;
                 System.out.println("PROMEDIO: "+promedio+"%");
                 System.out.println("NOTA MENOR: "+notamenor);
