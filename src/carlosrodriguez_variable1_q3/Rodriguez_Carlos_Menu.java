@@ -21,9 +21,36 @@ public class Rodriguez_Carlos_Menu {
             
             if(opcion==1){
                 System.out.println("----CADENA----");
-                
-                
+                System.out.println("Ingrese una cadena de texto:");
+                String cadena=lea.next();
+
+                int longitud=cadena.length();
+                int maxRepeticiones=0;
+                char caracterRepetido=' ';
+                char caracter=0;
+
+                while (caracter<256) {
+                    int contador=0;
+                    int contadorCaracter=0;
+
+                    while (contadorCaracter<longitud) {
+                        if (cadena.charAt(contadorCaracter)==caracter) {
+                            contador++;
+                        }
+                        contadorCaracter++;
+                    }
+
+                    if (contador>maxRepeticiones) {
+                        maxRepeticiones=contador;
+                        caracterRepetido=caracter;
+                    }
+
+                    caracter++;
+                }
+                System.out.println("El caracter que mas veces se repite en la cadena es: " + caracterRepetido);
+                System.out.println("Numero de veces que se repite en la cadena: " + maxRepeticiones);
         }   
+               
             else if(opcion==2){
                 System.out.println("----NOTAS----");
                 System.out.println("Ingresar cantidad de notas que desea: ");
