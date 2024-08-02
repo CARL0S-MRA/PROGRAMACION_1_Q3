@@ -69,16 +69,30 @@ public class Lab3_Rodriguez_Carlos {
                     
                 case 2:
                     System.out.println("Ejercicio Suma");
+                    int numero;
+                    String suma2="";
+                    int suma = 0;
+                    
                     System.out.println("Ingresar un numero no negativo: ");
-                    int numero=lea.nextInt();
+                    numero=lea.nextInt();
                     String repetir;
                     
                     while(numero < 0){
                         System.out.println("ERROR. FAVOR SOLO INGRESAR NUMEROS ENTEROS POSITIVOS: ");
                         numero=lea.nextInt();
                     }
-                    int suma =0;
-                    
+                    String numerotexto=Integer.toString(numero);
+                    int length=numerotexto.length()-1;
+                    for(int cont=0; cont<=length; cont++){
+                        char numChar = numerotexto.charAt(cont);
+                        
+                        int digito = Integer.parseInt(Character.toString(numChar));
+                        
+                        suma2 += digito+" + ";
+                        suma+=digito;
+                    }
+                    String sumSub= suma2.substring(0, suma2.length()-3);
+                    System.out.println(sumSub+" = "+suma);
                     
                     break;
                     
@@ -87,9 +101,10 @@ public class Lab3_Rodriguez_Carlos {
                     System.out.println("Patron Numerico");
                     do{
                     while(true){
-                        System.out.println("Ingresar un numero");
+                        System.out.println("Ingresar un numero de filas");
                         int numero_case3=lea.nextInt();
                         
+                        System.out.println("EL PATRON NUMERICO SERIA: ");
                         for(int h = 0; h < numero_case3; h ++){
                             for (int j = 0; j < h; j++){
                                 System.out.print("  ");
