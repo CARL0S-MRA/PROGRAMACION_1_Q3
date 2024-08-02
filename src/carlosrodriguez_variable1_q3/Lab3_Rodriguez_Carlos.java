@@ -75,7 +75,6 @@ public class Lab3_Rodriguez_Carlos {
                     
                     System.out.println("Ingresar un numero no negativo: ");
                     numero=lea.nextInt();
-                    String repetir;
                     
                     while(numero < 0){
                         System.out.println("ERROR. FAVOR SOLO INGRESAR NUMEROS ENTEROS POSITIVOS: ");
