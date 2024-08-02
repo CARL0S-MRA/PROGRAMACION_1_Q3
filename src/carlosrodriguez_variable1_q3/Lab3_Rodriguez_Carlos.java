@@ -50,8 +50,11 @@ public class Lab3_Rodriguez_Carlos {
                             System.out.println("!EMPATE!");
                         }else if((UsuarioEleccion.equals("piedra") && botChoice.equals("tijera"))||
                                  (UsuarioEleccion.equals("tijera") && botChoice.equals("papel"))||
-                                 (UsuarioEleccion.equals("papel") && botChoice.equals("piedra"))){
+                                 (UsuarioEleccion.equals("papel") && botChoice.equals("piedra")))
+                        {
+                            
                         System.out.println("GANASTE LA BATALLA!!!!");
+                        
                     }else{
                             System.out.println("HAHAHAHHAHA TE GANO EL BOT QUE MALO!!!!!!");
                            }
@@ -66,6 +69,15 @@ public class Lab3_Rodriguez_Carlos {
                     
                 case 2:
                     System.out.println("Ejercicio Suma");
+                    System.out.println("Ingresar un numero no negativo: ");
+                    int numero=lea.nextInt();
+                    String repetir;
+                    
+                    while(numero < 0){
+                        System.out.println("ERROR. FAVOR SOLO INGRESAR NUMEROS ENTEROS POSITIVOS: ");
+                        numero=lea.nextInt();
+                    }
+                    int suma =0;
                     
                     
                     break;
@@ -73,7 +85,27 @@ public class Lab3_Rodriguez_Carlos {
                     
                 case 3:
                     System.out.println("Patron Numerico");
-                    
+                    do{
+                    while(true){
+                        System.out.println("Ingresar un numero");
+                        int numero_case3=lea.nextInt();
+                        
+                        for(int h = 0; h < numero_case3; h ++){
+                            for (int j = 0; j < h; j++){
+                                System.out.print("  ");
+                            }
+                            for (int i = numero_case3 - h; i >= 1; i-- ){
+                                System.out.print(i + " ");
+                            }
+                            System.out.println();
+                        }
+                        break;
+                    } 
+                    System.out.println(" DESEA REPETIR EL PROGRAMA? (si|no)");
+                    repetir=lea.next().toLowerCase();
+                        
+                    }while(repetir.equals("si"));
+                    System.out.println("--TERMINA EL PROGRAMA--");
                     
                     break;
                     
