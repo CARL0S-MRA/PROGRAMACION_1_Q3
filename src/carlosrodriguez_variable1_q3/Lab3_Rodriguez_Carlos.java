@@ -97,6 +97,7 @@ public class Lab3_Rodriguez_Carlos {
                     
                     
                 case 3:
+                    String repetir;
                     System.out.println("Patron Numerico");
                     do{
                     while(true){
