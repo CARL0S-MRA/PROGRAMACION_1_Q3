@@ -49,6 +49,7 @@ public class HW2_Rodriguez_Carlos {
                     
                     }while(repetir.equals("si"));
                     System.out.println("---FIN DEL EJERCICIO#1---");
+                    
                     break;
                     
                 case 2:
@@ -74,11 +75,47 @@ public class HW2_Rodriguez_Carlos {
                         repetir=lea.next();
                     }while(repetir.equals("si"));
                     System.out.println("---FIN DEL EJERCICIO#2---");
+                    
                     break;
                     
                 case 3:
                     System.out.println("Listado de Palindromo y Numero");
+                    do{
+                    System.out.println("Ingresa la cantidad de palabras que desea: ");
+                    int contarPalabra = lea.nextInt();
+                    lea.nextLine();
                     
+                    String word;
+                    Boolean Palindromo;
+                    int numeroPalabra = 1;
+                    
+                    while(contarPalabra > 0){
+                        System.out.println("Palabra#"+numeroPalabra+":");
+                        word=lea.nextLine();
+                        Palindromo = true;
+                        
+                        int length = word.length();
+                        for(int i = 0; i < length / 2; i++){
+                            if(word.charAt(i) != word.charAt(length -1 -i)){
+                                Palindromo = false;
+                                break;
+                            }
+                        }
+                        if(Palindromo){
+                            System.out.println("La palabra "+word+" es un palindromo");
+                        }else{
+                            System.out.println("La palabra "+word+" no es un palindromo");
+                        }
+                        numeroPalabra++;
+                        contarPalabra--;
+                    }
+                        System.out.println("DESEA REPETIR EL EJERCICIO (si|no)");
+                        repetir=lea.next();
+                        
+                    }while(repetir.equals("si"));
+                    System.out.println("---FIN DEL EJERCICIO#3");
+                    
+                    break;
             }
                     
                     
