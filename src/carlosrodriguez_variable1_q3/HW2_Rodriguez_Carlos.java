@@ -113,7 +113,7 @@ public class HW2_Rodriguez_Carlos {
                         repetir=lea.next();
                         
                     }while(repetir.equals("si"));
-                    System.out.println("---FIN DEL EJERCICIO#3");
+                    System.out.println("---FIN DEL EJERCICIO#3---");
                     
                     break;
             }
