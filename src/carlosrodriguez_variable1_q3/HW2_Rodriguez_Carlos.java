@@ -1,0 +1,60 @@
+package carlosrodriguez_variable1_q3;
+import java.util.Scanner;
+
+public class HW2_Rodriguez_Carlos {
+    public static void main(String[]args){
+        Scanner lea=new Scanner(System.in);
+        String repetir;
+        int opcion = 0;
+        
+        do{
+            System.out.println("----MENU----"+
+                    "\n 1 - Ejercicio 1"+
+                    "\n 2 - Ejercicio 2"+
+                    "\n 3 - Ejercicio 3"+
+                    "\n 4 - SALIR");
+            System.out.println("Ingrese el numero de cada opcion: ");
+            opcion=lea.nextInt(); 
+            
+            switch(opcion){
+                case 1:
+                    
+                    String palabra = "";
+                    System.out.println("Impresion de palabras de manera diagonal");
+                    do{
+                    System.out.println("Ingresar una palabra: ");
+                    palabra = lea.next().toUpperCase();
+                    int length = palabra.length();
+
+                    for (int iniciar = 0; iniciar < length; iniciar++) {
+                        for (int i = 0; i < iniciar; i++) {
+                            System.out.print(" ");
+                        }
+                        System.out.println(palabra.charAt(iniciar));
+                    }
+
+                    for (int finales = 0; finales < length; finales++) {
+                        for (int f = length - 1; f > finales; f--) {
+                            System.out.print(" ");
+                        }
+                        System.out.println(palabra.charAt(finales));
+                    }
+                    System.out.println(" DESEA REPETIR EL PROGRAMA? (si|no)");
+                    repetir=lea.next().toLowerCase();
+                    
+                    }while(repetir.equals("si"));
+                    System.out.println("---FIN DEL EJERCICIO#1---");
+                    break;
+                    
+                case 2:
+                    System.out.println("Piramide de Numeros");
+                    
+                    
+            }
+                    
+                    
+        }while(opcion !=4);
+    }
+}
+
+
