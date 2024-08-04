@@ -1,3 +1,8 @@
+/*
+Programacion 1
+Carlos Mauricio Rodriguez Altamirano
+22411261
+*/
 package carlosrodriguez_variable1_q3;
 import java.util.Scanner;
 
