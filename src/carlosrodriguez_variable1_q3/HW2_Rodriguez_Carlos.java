@@ -39,7 +39,7 @@ public class HW2_Rodriguez_Carlos {
                         }
                         System.out.println(palabra.charAt(finales));
                     }
-                    System.out.println(" DESEA REPETIR EL PROGRAMA? (si|no)");
+                    System.out.println(" DESEA REPETIR EL EJERCICIO? (si|no)");
                     repetir=lea.next().toLowerCase();
                     
                     }while(repetir.equals("si"));
@@ -48,7 +48,31 @@ public class HW2_Rodriguez_Carlos {
                     
                 case 2:
                     System.out.println("Piramide de Numeros");
+                    do{
+                    System.out.println(" Introduce un numero de filas: ");
+                    int numerofilas =lea.nextInt();
                     
+                    for(int filas = 1; filas <= numerofilas; filas++){
+                        
+                    for(int espacio = 1; espacio < filas; espacio++){
+                        System.out.print("  ");
+                    }
+                    for(int ascendente = filas; ascendente <= numerofilas; ascendente++){
+                        System.out.print(ascendente + " ");
+                    }
+                    for(int descendente = numerofilas - 1; descendente >= filas; descendente--){
+                        System.out.print(descendente + " ");
+                    }
+                        System.out.println( );
+                }
+                        System.out.println(" DESEA REPETIR EL EJERCICIO(si|no)");
+                        repetir=lea.next();
+                    }while(repetir.equals("si"));
+                    System.out.println("---FIN DEL EJERCICIO#2---");
+                    break;
+                    
+                case 3:
+                    System.out.println("Listado de Palindromo y Numero");
                     
             }
                     
