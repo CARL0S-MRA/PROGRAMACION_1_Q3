@@ -1,9 +1,11 @@
 package carlosrodriguez_variable1_q3;
 import java.util.Scanner;
-
+//Importamos random para que nos sirva el programa de "Primos"
+import java.util.Random;
 public class Prueba1_Rdoriguez_Carlos {
     public static void main(String[]args){
         Scanner lea=new Scanner(System.in);
+        Random random=new Random();
         int opcion=0;
         do{ 
         System.out.println("MENU"
@@ -37,7 +39,7 @@ public class Prueba1_Rdoriguez_Carlos {
                     int contador =0;
                     int numero =0;
                     int divisor=0;
-                    System.out.println("---Primos---");
+                    System.out.println("---NUMEROS PERFECTOS---");
                     //Pedimos que nos ingrese un numero
                     System.out.println("Ingrese un numero: ");
                     numero=lea.nextInt();
@@ -58,7 +60,38 @@ public class Prueba1_Rdoriguez_Carlos {
                     break;
                     
                 case 3:
+                    //Ponemos una variable y la igualamos a random para que asi pueda imprimir numeros aleatorios del 1 al 100
+                    int numeroRandom = random.nextInt(100);
+                    // Esta variable un contador y la igualamos a 1 para que comienze A contar los numeros divisores desde 1
+                    int contadorDivisor = 1;
+                    int primo =0;
+                    
                     System.out.println("---PRIMOS---");
+                    
+                    System.out.println("El numero generado es: "+numeroRandom);
+                    // Hacemos un bucle con while para encontrar los divisores del numero generado
+                    // asi
+                    while(contadorDivisor <= numeroRandom){
+                        // en if verifica si el contador es divisor del numero aleatorio
+                        if(numeroRandom % contadorDivisor ==0){
+                            primo += contadorDivisor;
+                        }
+                        contadorDivisor++;
+                    }
+                    // En el if hacemos que compare si es primo el numero random generado
+                    // Si es primo que genero que se dividido por dos numeros y que ha sido por 1 y el numero random\
+                    // Si es lo contario solo se imprime que no es primo
+                        if(primo==numeroRandom + 1){
+                            System.out.println("El "+numeroRandom+" es divisor de dos numeros");
+                            System.out.println("Divisores de "+numeroRandom+" son: 1 y "+numeroRandom);
+                        }else{
+                            System.out.println("No es un numero primo");
+                        }
+
+                    break;
+                    
+                case 4:
+                    System.out.println("---VOTACIONES---");
                     
                     break;
             }
