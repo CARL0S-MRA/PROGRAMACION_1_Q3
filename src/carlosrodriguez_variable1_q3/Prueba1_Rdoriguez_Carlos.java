@@ -33,6 +33,32 @@ public class Prueba1_Rdoriguez_Carlos {
                     break;
                     
                 case 2:
+                    // Agregamos las variables que vamos a usar
+                    int contador =0;
+                    int numero =0;
+                    int divisor=0;
+                    System.out.println("---Primos---");
+                    //Pedimos que nos ingrese un numero
+                    System.out.println("Ingrese un numero: ");
+                    numero=lea.nextInt();
+                    // hacemos un for con contador para que recorra todos los numeros exceptuando el 1
+                    //Le agregramos un if para que este verifique que el numero que ponga el contador sea divisor al numero que nosostros ingresemos
+                    for(contador = 1; contador < numero; contador++){
+                        if(numero % contador == 0){
+                            divisor += contador;
+                        }
+                    }
+                    //Le ponemos un if para que compare Si la suma de los divisores es igual al numero que nosotros ingresamos asi que nos imprima que es un numero perfecto.
+                    // Si no es asi se imprime lo contrario utilizando else
+                    if(divisor == numero){
+                    System.out.println(+numero+"<=es un numero perfecto");
+                    }else{
+                        System.out.println(+numero+"<=no es numero perfecto");
+                    }
+                    break;
+                    
+                case 3:
+                    System.out.println("---PRIMOS---");
                     
                     break;
             }
