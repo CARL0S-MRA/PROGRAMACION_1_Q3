@@ -7,6 +7,10 @@ public class Prueba1_Rdoriguez_Carlos {
         Scanner lea=new Scanner(System.in);
         Random random=new Random();
         int opcion=0;
+        int contaalreves=0;
+        int contaperfectos=0;
+        int contaprimos=0;
+        int contaVotaciones=0;
         do{ 
         System.out.println("MENU"
         +"\n 1- Palabra Alreves"
@@ -19,6 +23,7 @@ public class Prueba1_Rdoriguez_Carlos {
             
             switch(opcion){
                 case 1:
+                    contaalreves++;
                     String palabra;
                     System.out.println("---PALABRA ALREVES---");
                     //Ingresamos la palabra
@@ -35,6 +40,7 @@ public class Prueba1_Rdoriguez_Carlos {
                     break;
                     
                 case 2:
+                    contaperfectos++;
                     // Agregamos las variables que vamos a usar
                     int contador =0;
                     int numero =0;
@@ -60,6 +66,7 @@ public class Prueba1_Rdoriguez_Carlos {
                     break;
                     
                 case 3:
+                    contaprimos++;
                     //Ponemos una variable y la igualamos a random para que asi pueda imprimir numeros aleatorios del 1 al 100
                     int numeroRandom = random.nextInt(100);
                     // Esta variable un contador y la igualamos a 1 para que comienze A contar los numeros divisores desde 1
@@ -91,10 +98,82 @@ public class Prueba1_Rdoriguez_Carlos {
                     break;
                     
                 case 4:
-                    System.out.println("---VOTACIONES---");
+                    contaVotaciones++;
+                    int votosAzul =0;
+                    int votosAmarillo=0;
+                    int votosRojo=0;
+                    int votosNegro=0;
+                    int votosNulos=0;
+                    int repetidor=0;
                     
+                    System.out.println("---VOTACIONES---");
+                    System.out.println("Ingrese cantidad de votantes: ");
+                    int votantes=lea.nextInt();
+                    for(repetidor =0; repetidor<votantes; repetidor++){
+                        
+                        System.out.println("--PLANILLA--"
+                        +"\n - AZUL"
+                        +"\n - AMARILLO"
+                        +"\n - ROJO"
+                        +"\n - NEGRO");
+                        System.out.println("Ingrese el voto en cualquier planilla: ");
+                        String planilla=lea.next().toUpperCase();
+                        
+                        switch(planilla){
+                            case "AZUL" :
+                                votosAzul++;
+                                break;
+                            case "AMARILLO" :
+                                votosAmarillo++;
+                                break;
+                            case "ROJO":
+                                votosRojo++;
+                                break;
+                            case "NEGRO":
+                                votosNegro++;
+                                break;
+                            default:
+                                votosNulos++;
+                                break;
+                                
+                        }
+                    }
+                    int votosValidos = votosAzul + votosRojo + votosNegro + votosAmarillo;
+                    if (votosValidos >= votantes * 0.6) {
+                        String planillaGanadora ="";
+                        int maxVotos = 0;
+                        if (votosAzul > maxVotos) {
+                            maxVotos = votosAzul;
+                            planillaGanadora = "AZUL";
+                        }
+                        if (votosRojo > maxVotos) {
+                            maxVotos = votosRojo;
+                            planillaGanadora = "ROJO";
+                        }
+                        if (votosNegro > maxVotos) {
+                            maxVotos = votosNegro;
+                            planillaGanadora = "NEGRO";
+                        }
+                        if (votosAmarillo > maxVotos) {
+                            maxVotos = votosAmarillo;
+                            planillaGanadora = "AMARILLO";
+                        }
+
+                        // Imprime la planilla ganadora
+                        System.out.println("La planilla ganadora es: " + planillaGanadora);
+                    } else {
+                        // Imprime que la votación ha fallado si no se cumplen los requisitos
+                        System.out.println("VOTACIÓN FALLIDA");
+                    }
                     break;
+                    
+                case 5:
+                    System.out.println("Veces de PALABRA ALREVES: " +contaalreves);
+                    System.out.println("Veces de NUMEROS PERFECTOS: "+contaperfectos);
+                    System.out.println("Veces de PRIMOS: "+contaprimos);
+                    System.out.println("Veces de VOTACIONES: "+contaVotaciones);
             }
+            
             
         }while(opcion !=5);
     }
